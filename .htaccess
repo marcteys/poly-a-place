@@ -1,0 +1,30 @@
+SetEnv PHP_VER 5
+
+RewriteEngine on
+Options +FollowSymlinks -MultiViews
+
+
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+
+RewriteRule ^403$ 403.php
+RewriteRule ^403/$ 403.php
+RewriteRule ^404$ 404.php
+RewriteRule ^404/$ 404.php
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?randUrl=$1 [NE,B,L]
+RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?randUrl=$1 [NE,B,L]
+
+
+# RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php elle fonctionne nickel, mais un peu trop... :/
+# RewriteRule ^([a-zA-Z0-9_-]+)/$ $1.php
+
+# OK -> RewriteRule ^project/([a-zA-Z0-9\-\s]+) project.php?url=$1
+
+
+#RewriteRule ^project$ work.php
+#RewriteRule ^project/$ work.php
+
+# RewriteRule ([a-zA-Z0-9\-]+) article.php?url=$1
+# RewriteRule projet/([a-zA-Z0-9\-]+)-([0-9]+) article.php?id=$2
