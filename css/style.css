@@ -1,0 +1,348 @@
+* {
+	margin:0;
+	padding:0;
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+}
+body {
+	background-color:#e5dfd3;
+}
+h1 {
+	position: absolute;
+	z-index:2;
+	font-size:34px;
+	top:5%;
+	left: 15%;
+		text-shadow: 	#e5dfd3 2px 2px 0px, #bbb 4px 4px 0;
+}
+p {
+		position: absolute;
+top:15%;
+	left: 15%;
+	font-size:12px;
+
+	text-shadow : rgba(0,0,0,.3) 0px 0px 5px;
+			text-shadow: 	 #b6b6b6 2px 2px 0;
+
+	/*text-shadow: 	#F2F2F2 1px 1px 0px, #ccc 3px 3px 0;*/
+
+}
+span {
+font-size:11px;	
+margin-left:10px;
+		text-shadow: 	#e5dfd3 1px 1px 0px, #bbb 2px 2px 0;
+		letter-spacing:-3px;
+}
+p em {
+	font-style: normal;
+}
+canvas {
+    border:none;
+    display:block;
+
+}
+
+
+image, canvas {
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+}
+
+
+
+
+img {
+z-index:-1;
+position:absolute;
+left:-26%;
+top:-32%
+}
+.share {
+    position: absolute;
+  
+left:15%;
+top:25%;
+    width: 85px;
+    overflow: hidden;
+    opacity: .7;
+    -webkit-transition:all .4s;
+    -moz-transition:all .4;
+    -o-transition:all .4s;
+    -ms-transition:all .4s;
+    transition:all .4s;
+}
+.share:hover {
+    opacity: 1;
+}
+
+.clear {
+    clear: both;
+    height: 10px;
+}
+
+#panel {
+    position: absolute;
+    border-radius: 2px;
+    background: #bb8d5d;
+    height:auto;
+    left:9%;
+    width:80px;
+    top:25%;
+    margin-top:-100px;
+    box-shadow: 0 6px  0 #9e7758;
+    padding-bottom: 20px;
+}
+
+#panel a {
+    background-color: #8bb54a;
+    height: 40px;
+    margin:20px 20px 0;
+    width:40px;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    line-height: 40px;
+        border-radius: 2px;
+box-shadow: 0 4px  0 #7c9e45;
+cursor: pointer;
+content: 'l';
+text-decoration: none;
+}
+
+#panel a.g {
+	background-color: #8bb54a;
+background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+background-image: -webkit-linear-gradient(white 2px, transparent 2px),
+                  -webkit-linear-gradient(0, white 2px, transparent 2px),
+                  -webkit-linear-gradient(rgba(0,0,0,.3) 1px, transparent 1px),
+                  -webkit-linear-gradient(0, rgba(0,0,0,.3) 1px, transparent 1px);
+background-image: -moz-linear-gradient(white 2px, transparent 2px),
+                  -moz-linear-gradient(0, white 2px, transparent 2px),
+                  -moz-linear-gradient(rgba(0,0,0,.3) 1px, transparent 1px),
+                  -moz-linear-gradient(0, rgba(0,0,0,.3) 1px, transparent 1px);
+background-image: linear-gradient(white 2px, transparent 2px),
+                  linear-gradient(90deg, white 2px, transparent 2px),
+}
+#panel a.g:before {
+    content:'';
+
+}
+
+#panel a:before {
+	text-shadow : rgba(0,0,0,.2) 2px 2px 0px;
+}
+#panel a.r {
+background: #6a6a6a;
+box-shadow:   4px 0 0  0 #d9d3bf inset, 0 4px  0  0 #d9d3bf inset,0 0  4px    0 #d9d3bf inset,0 0 0 4px   #d9d3bf inset;
+box-shadow: 0 4px  0 #d9d3bf;
+
+} #panel a.r:before {
+content : 'R';    
+
+
+} #panel a.t:before {
+	content : 'T';    
+}
+#panel a.t {
+box-shadow: 0 8px  0 #7c9e45;
+
+} 
+#panel a.i:before {
+content: '';
+
+}
+#panel a.i {
+background: #9e7758;
+box-shadow: none;
+opacity:.5;
+
+}
+#panel a.i:hover {
+	opacity: .8;
+}
+#panel a.w {
+    background: #a4d1e3;
+box-shadow: 0 4px  0 #70c0d3
+
+
+}
+#panel a.w:before {
+    content : 'W';
+}
+
+#panel a:active {
+  margin: 21px 20px -1px;
+  opacity: 1;
+ }
+
+ #panel .sep {
+    border-radius: 2px;
+    background: #9e7758;
+    height:2px;
+    width:40px;
+    margin:20px auto 0px;
+   border-radius:2px;
+   clear: both;}
+ .opacityhalf{
+    opacity: .5;
+ }
+#experiment {
+width: 150px; height: 79px; background-size: 150px 79px; 
+pointer-events: auto; left: 20px;
+ bottom: 50px; opacity: 0.8; z-index: 100000; 
+ background-image: url(../img/chrome-experimentn.png); visibility: visible;
+position: absolute;
+z-index: 20;
+left: 50px;
+
+overflow: hidden;
+display: block;
+text-indent: -999px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type='text'] {
+    width: 100%;
+    height: 20px;
+    border: none;
+    border-radius: 3px;
+    margin:5px 0;
+    font-size: 9px;
+    color: rgba(0,0,0,.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+#content_loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+        background-color:#e5dfd3;
+        z-index: 50;
+}
+
+#loadingProgressG{
+width:256px;
+height:20px;
+overflow:hidden;
+background-color:#8AB54A;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-ms-border-radius:10px;
+-o-border-radius:10px;
+border-radius:10px;
+left: 50%;
+top: 40%;
+position: absolute;
+margin-left: -126px;
+}
+
+.loadingProgressG{
+background-color:#E5DFD3;
+margin-top:0;
+margin-left:-256px;
+-moz-animation-name:bounce_loadingProgressG;
+-moz-animation-duration:1.8s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-timing-function:linear;
+-webkit-animation-name:bounce_loadingProgressG;
+-webkit-animation-duration:1.8s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:linear;
+-ms-animation-name:bounce_loadingProgressG;
+-ms-animation-duration:1.8s;
+-ms-animation-iteration-count:infinite;
+-ms-animation-timing-function:linear;
+-o-animation-name:bounce_loadingProgressG;
+-o-animation-duration:1.8s;
+-o-animation-iteration-count:infinite;
+-o-animation-timing-function:linear;
+animation-name:bounce_loadingProgressG;
+animation-duration:1.8s;
+animation-iteration-count:infinite;
+animation-timing-function:linear;
+width:256px;
+height:20px;
+}
+
+@-moz-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-256px;
+}
+
+100%{
+margin-left:256px;
+}
+
+}
+
+@-webkit-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-256px;
+}
+
+100%{
+margin-left:256px;
+}
+
+}
+
+@-ms-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-256px;
+}
+
+100%{
+margin-left:256px;
+}
+
+}
+
+@-o-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-256px;
+}
+
+100%{
+margin-left:256px;
+}
+
+}
+
+@keyframes bounce_loadingProgressG{
+0%{
+margin-left:-256px;
+}
+
+100%{
+margin-left:256px;
+}
+
+}
+- See more at: http://cssload.net/#sthash.GS2Z8drP.dpuf
