@@ -13,48 +13,41 @@ Multiplayer game.
 
 Poly a place has been tested on Chrome 13.
 
-* Known issues in Firefox 5+ (you can still observe)
+* Known issues in Firefox 
 
 # TODO
 
-* Easy Sql configuration
+__Visual__
 * Resizing viewports
+* Remove the loader only when everything is loaded
+* Build a new interface
+* Improve drag and Drop
+* New sprites to correct the 'white line'
+* Trees (how to plant ? random ?)
+* Add rows ? (.push)
 
+__Saving__
+* Take a screenshot, Resize, Rename and Save
+* Save data with tiles level
 
-Important
---------------
+__Loading__
+* Open saved sketch (use a `randname`) 
+* Load tiles
+Advanced loading - A new popup with :
+* Search by Name, date, sketch name, thumbnail
 
+__Network__
+* Connection with a phone
+* Create Different rooms
 
-- [ ]  Enlever le loader quand les images sont chargés uniquement
-  Elevation du terrain/sprite a corriger ?
-  Plantage des arbres
-  Amélioration drag and drop
-  Exporter et importer
-  Changer le design
-  Ajout dynamique de row
-  si amélioration du rechargement : modification du design des sprites
+__Gameplay__
+For the moment there is no gameplay in this experiment. Idea : Create a short race. The car follow a bezier curve. Use a velocity vector for the speed.
+To move the car, press only the `space` key
 
+* Build a car !
+* Build a Start tile
 
-Sauvegarde d'un sketrch
-
-  o Sauver l'image sur le serveur //ajax+php (http://stackoverflow.com/questions/13198131/how-to-save-a-html5-canvas-as-image-on-a-server)
-  o La redimentionner  //php
-  o Définir un nom au dessin
-  o Exporter les coordonnée
-  o Schéma base de donnée : 
-      - ID | Utilisateur | Nom terrain | Date | radomname
-  o Ouvrir l'url avec /randomname
-  o Ouvrir l'url avec dsétail des tuiles
-
-Load d'un sketch :
-
-  o Entrée par nom d'utilisateur
-  o Entrée par date
-  o Entrée par nom de sketch
-  o Selectionner : Regarcher canvas
-
-
-Jouabiloité :
-
-  Création d'une voiture/objet qui se déplace
+__Other__
+* Easy Sql configuration
+* Clean the code, create classes (one class to build q tile, whitch contains all the oissible tiles)
 
