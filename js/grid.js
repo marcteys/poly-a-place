@@ -1,30 +1,3 @@
-/* Poly - A -Craft Changelog 
-
-
-
-
-
-03/08/13 : 20h | Ajout des étages 
-04/08/13 : 12h18 | Ajout de la zone de dessin en hauteur
-04/08/13 : 19h00 | Début de l'amélioration du rechargemlent des images
-04/08/13 : 23h24 | Amélioration du rechargemlent des images
-
-
-
-
-
-
-*/
-
-
-
-
-
-
-
-
-
-
 
 window.onload = function () {
   $('#content_loader').fadeOut('slow', function(){ $('#content_loader').remove(); });

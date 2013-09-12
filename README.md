@@ -3,19 +3,22 @@ Poly A Place
 
 Multiplayer game.
 
-# Running
+Running
+--------
 
 * Run `configure.php`
 * Open `index.php` 
 
 
-# Compatibility
+Compatibility
+--------
 
 Poly a place has been tested on Chrome 13.
 
 * Known issues in Firefox 
 
-# TODO
+TODO
+--------
 
 __Visual__
 * Resizing viewports
@@ -41,6 +44,7 @@ __Network__
 * Create Different rooms
 
 __Gameplay__
+
 For the moment there is no gameplay in this experiment. Idea : Create a short race. The car follow a bezier curve. Use a velocity vector for the speed.
 To move the car, press only the `space` key
 
