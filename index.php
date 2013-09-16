@@ -26,7 +26,7 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
     	    	<p><em>Left click</em> to paint the road</p>
     	    	<p style="top:18%"><em>Right click</em> to remove it
     	    		</p>
-<div id="savedZone">  <?php if(isset($_GET['randUrl'])) echo $_GET['randUrl']; ?></div>
+<div id="savedZone"></div>
 <div id="panel" draggable="true">
 
 <a  onclick="paintTool('road')" class=" r" ></a>

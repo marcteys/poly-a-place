@@ -1,6 +1,10 @@
 <?php
 
 
+  // *** Include the class
+  include("resize-class.php");
+
+
 if(!empty($_POST)) {
 	extract($_POST);
 	foreach ($_POST as $key => $value) {
@@ -8,7 +12,6 @@ if(!empty($_POST)) {
 	}
 
 $imageData=$canvasData;
-
 // Remove the headers (data:,) part.
 // A real application should use them according to needs such as to check image type
 $filteredData=substr($imageData, strpos($imageData, ",")+1);
@@ -16,12 +19,29 @@ $filteredData=substr($imageData, strpos($imageData, ",")+1);
 // Need to decode before saving since the data we received is already base64 encoded
 $unencodedData=base64_decode($filteredData);
 
-$fp = fopen( '../images/tmp/'.$newRandName.'.png', 'wb' );
+$fp = fopen( '../images/tmp/'.$newRandName.'big.png', 'wb' );
 fwrite( $fp, $unencodedData);
 fclose( $fp );
 
-$image = '../images/tmp/'.$newRandName.'.png';
-$filename = '../images/'.$newRandName.'.png';
+
+
+
+$file = '../images/tmp/'.$newRandName.'big.png';
+
+//indicate the path and name for the new resized file
+$resizedFile = '../images/'.$newRandName.'big.png';
+
+//call the function
+smart_resize_image($file , 200, 200 , true, $resizedFile , true/*delete original*/, false ,100);
+
+
+
+
+
+}
+
+/*
+echo $image;
 
 $thumb_width = 200;
 $thumb_height = 150;

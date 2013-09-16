@@ -3,7 +3,7 @@ window.onload = function () {
   $('#content_loader').fadeOut('slow', function(){ $('#content_loader').remove(); });
 // if(totalLoaded >= allTiles.length) init();
   init(getHash());
-
+  console.log(getHash());
 }
 
 
@@ -216,38 +216,43 @@ function CreateImg(imgLoadName){
 
 
     function init(randUrlHash) {
-      var count = 0;
-      for (var gridY = 0; gridY < gridResolutionY; gridY++) {
-        for (var gridX = 0; gridX < gridResolutionX; gridX++) {
-          isoTiles[count] = {
-            x: canvas.width / 2 + (gridX * tileSizeX / 2) - (gridY * tileSizeX / 2),
-            y: canvas.height / 5 + (gridX * tileSizeY / 2) + (gridY * 1) * (tileSizeY) - (gridY * tileSizeY / 2),
-            height: tileSizeX / 2,
-            width: tileSizeY / 2,
-            mouse: false,
-            posX: gridX + 1,
-            posY: gridY + 1,
-            active: "0",
-            stage : 0
+
+    if(randUrlHash == '') {
+         var count = 0;
+          for (var gridY = 0; gridY < gridResolutionY; gridY++) {
+            for (var gridX = 0; gridX < gridResolutionX; gridX++) {
+              isoTiles[count] = {
+                x: canvas.width / 2 + (gridX * tileSizeX / 2) - (gridY * tileSizeX / 2),
+                y: canvas.height / 5 + (gridX * tileSizeY / 2) + (gridY * 1) * (tileSizeY) - (gridY * tileSizeY / 2),
+                height: tileSizeX / 2,
+                width: tileSizeY / 2,
+                mouse: false,
+                posX: gridX + 1,
+                posY: gridY + 1,
+                active: "0",
+                stage : 0
+              }
+              count = count + 1;
+            }
+         
           }
-          count = count + 1;
-        }
-     
-      }
 
-   console.log(randUrlHash);
+    } else if(randUrlHash != null) {
 
-
-   if(randUrlHash != null) {
           $.post("scripts/select.php", {
             'randUrl': randUrlHash
 
           },function(texte){
+                if(texte == '') texte = 'Aucun projet avec cette url';
                         $("#savedZone").empty();
                         $("#savedZone").append(texte);
 
           }); 
- }
+
+    }
+ 
+
+ 
 
 
 
