@@ -20,6 +20,7 @@ try {
   $sql = "SELECT id FROM polyaplacebdd WHERE randUrl = '$randUrl'";
   $req = $DB -> query($sql);
 //select php pour fichier config
+//ajout d'une autre ligne de test
   ?>
 
 
