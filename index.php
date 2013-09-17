@@ -19,7 +19,7 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 try {
   $sql = "SELECT id FROM polyaplacebdd WHERE randUrl = '$randUrl'";
   $req = $DB -> query($sql);
-
+//select php pour fichier config
   ?>
 
 
