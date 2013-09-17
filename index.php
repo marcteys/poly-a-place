@@ -14,6 +14,15 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 
     </head>
     <body >
+      <?php
+      include('scripts/config.php');
+try {
+  $sql = "SELECT id FROM polyaplacebdd WHERE randUrl = '$randUrl'";
+  $req = $DB -> query($sql);
+
+  ?>
+
+
 <div id="content_loader">
    <!--       <?php if(isset($_GET['randUrl'])) echo $_GET['randUrl']; ?> -->
 
@@ -77,6 +86,18 @@ var _gaq = _gaq || [];
  $(document).ready(function() {
 
  });</p>
+
+
+
+
+<?php
+} catch(PDOExeption $e) {
+  echo 'Little problem with the BDD... come later :)';
+  die();
+}
+
+?>
+
 
     </body>
 </html>

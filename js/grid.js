@@ -4,8 +4,9 @@ window.onload = function () {
 // if(totalLoaded >= allTiles.length) init();
   init(getHash());
   console.log(getHash());
-}
 
+}
+var zoom = 2;
 
 
 var canvas = document.getElementById('canvas');
@@ -398,7 +399,7 @@ var dragTerrain = (function () {
 
 
        drawTiles();
-       drawZone();
+      drawZone();
 
 
        requestAnimFrame(function() {
@@ -635,17 +636,21 @@ if(currentStage == '0') ctx.strokeStyle = "rgba(50,50,50,.0)"
 
 for(var j = 0; j <= isoTiles[i].stage; j++ ) {
       ctx.drawImage(imgGround,
-            canvas.width / 2 + (isoTiles[i].posX * tileSizeX / 2) - (isoTiles[i].posY * tileSizeX / 2) - offsetX,
-            canvas.height / 5 + (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) -((j-1) * 15 ) - offsetY,100,65);
+            canvas.width / 2 + (isoTiles[i].posX * tileSizeX / 2/zoom) - (isoTiles[i].posY * tileSizeX / 2/zoom) - offsetX/zoom,
+            canvas.height / 5 + (isoTiles[i].posY * tileSizeY / 2/zoom) + (isoTiles[i].posX * tileSizeY / 2/zoom) -((j-1) * 15 /zoom) - offsetY/zoom,
+            100/zoom,
+            65/zoom);
       
 }
 
 
-
 /* dessin des tuiles */
       ctx.drawImage(CreateImg(activeImage),
-        canvas.width / 2 + (isoTiles[i].posX * tileSizeX / 2) - (isoTiles[i].posY * tileSizeX / 2) - offsetX,
-        canvas.height / 5 + (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY,100,65);
+        canvas.width / 2 + (isoTiles[i].posX * tileSizeX / 2/zoom)  - (isoTiles[i].posY * tileSizeX / 2 /zoom) - offsetX/zoom,
+        canvas.height / 5 + (isoTiles[i].posY * tileSizeY / 2 /zoom) + (isoTiles[i].posX * tileSizeY / 2 /zoom) - (isoTiles[i].stage * 15 /zoom)  - offsetY /zoom,
+        100/zoom,
+        65/zoom
+        );
   
 
 
