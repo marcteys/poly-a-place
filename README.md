@@ -28,7 +28,7 @@ __Visual__
 * New sprites to correct the 'white line'
 * Trees (how to plant ? random ?)
 * Add rows ? (.push)
-
+* Zoom level (default /2 )
 __Saving__
 * Take a screenshot, Resize, Rename and Save
 * Save data with tiles level
