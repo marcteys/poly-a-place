@@ -65,3 +65,7 @@ __Other__
 * Easy Sql configuration
 * Clean the code, create classes (one class to build q tile, whitch contains all the oissible tiles)
 
+Misc links
+----------
+[3dmap save data in Json/load data](http://jeromeetienne.github.io/marbleGame/editor/)
+
