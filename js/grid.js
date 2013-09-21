@@ -422,10 +422,28 @@ ctx.closePath();
 
       ctx.beginPath();
 
-      ctx.moveTo(isoTiles[i].x - offsetX  + 50, isoTiles[i].y- offsetY  + 50 - (currentStage * 15) );
-      ctx.lineTo(isoTiles[i].x + isoTiles[i].height - offsetX +50, isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15) );
-      ctx.lineTo(isoTiles[i].x - offsetX +50, isoTiles[i].y + isoTiles[i].width * 2 - offsetY  + 50 - (currentStage * 15) );
-      ctx.lineTo(isoTiles[i].x - isoTiles[i].height - offsetX +50, isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15) );
+      //            canvas.width / 2 + (isoTiles[i].posX * tileSizeX / 2/zoom) - (isoTiles[i].posY * tileSizeX / 2/zoom) - offsetX/zoom,
+      //      canvas.height / 5 + (isoTiles[i].posY * tileSizeY / 2/zoom) + (isoTiles[i].posX * tileSizeY / 2/zoom) -((j-1) * 15 /zoom) - offsetY/zoom,
+      //      
+      //   
+      //   
+      ctx.moveTo(isoTiles[0].x/zoom - (offsetX)/zoom  + 50/zoom, isoTiles[0].y - (offsetY)/zoom  + 50/zoom - (currentStage * 15)/zoom);
+      ctx.lineTo((isoTiles[0].x - isoTiles[0].height - offsetX +50)/zoom, (isoTiles[0].y + isoTiles[0].width - offsetY  + 50 - (currentStage * 15))/zoom );
+
+
+
+//modification du zoom
+//
+
+
+
+       /*
+      ctx.moveTo(isoTiles[i].x/zoom - (offsetX)/zoom  + 50/zoom, isoTiles[i].y - (offsetY)/zoom  + 50/zoom - (currentStage * 15)/zoom);
+      ctx.lineTo((isoTiles[i].x + isoTiles[i].height - offsetX +50)/zoom, (isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15))/zoom );
+      ctx.lineTo((isoTiles[i].x - offsetX +50)/zoom, (isoTiles[i].y + isoTiles[i].width * 2 - offsetY  + 50 - (currentStage * 15))/zoom );
+      ctx.lineTo((isoTiles[i].x - isoTiles[i].height - offsetX +50)/zoom, (isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15))/zoom );
+*/
+
       ctx.fillStyle = "rgba(255,255,255,0)";
       if (grid) ctx.strokeStyle = "rgba(50,50,50,.2)";
       else ctx.strokeStyle = "rgba(50,50,50,.0)";
@@ -440,7 +458,7 @@ ctx.closePath();
 /*lignes */
 if(currentStage == '0') ctx.strokeStyle = "rgba(50,50,50,.0)"
   else ctx.strokeStyle = "rgba(50,50,50,.2)"
-      ctx.moveTo(isoTiles[i].x - offsetX  + 50, isoTiles[i].y- offsetY  + 50 - (currentStage * 15) + (lineHeight*currentStage));
+      ctx.moveTo(isoTiles[i].x - offsetX  + 50, isoTiles[i].y- offsetY  + 50 - (currentStage * 15 ) + (lineHeight*currentStage));
       ctx.lineTo(isoTiles[i].x - offsetX  +50, isoTiles[i].y- offsetY   - (currentStage * 15)    +50);
 
       ctx.moveTo(isoTiles[i].x + isoTiles[i].height - offsetX +50, isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15) + (lineHeight*currentStage));
@@ -455,10 +473,14 @@ if(currentStage == '0') ctx.strokeStyle = "rgba(50,50,50,.0)"
 
 /*bas */
 
-      ctx.moveTo(isoTiles[i].x - offsetX  + 50, isoTiles[i].y- offsetY  + 50 - (currentStage * 15)+ (lineHeight*currentStage) );
-      ctx.lineTo(isoTiles[i].x + isoTiles[i].height - offsetX +50, isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15) + (lineHeight*currentStage));
-      ctx.lineTo(isoTiles[i].x - offsetX +50, isoTiles[i].y + isoTiles[i].width * 2 - offsetY  + 50 - (currentStage * 15) + (lineHeight*currentStage));
-      ctx.lineTo(isoTiles[i].x - isoTiles[i].height - offsetX +50, isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15) + (lineHeight*currentStage));
+  //    ctx.moveTo((isoTiles[i].x - offsetX  + 50)/zoom,
+   //     (isoTiles[i].y - offsetY  + 50 - (currentStage * 15)+ (lineHeight*currentStage))/zoom );
+   //   ctx.lineTo(isoTiles[i].x + isoTiles[i].height - offsetX +50,
+  //      isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15) + (lineHeight*currentStage));
+  //    ctx.lineTo(isoTiles[i].x - offsetX +50,
+    //    isoTiles[i].y + isoTiles[i].width * 2 - offsetY  + 50 - (currentStage * 15) + (lineHeight*currentStage));
+    //  ctx.lineTo(isoTiles[i].x - isoTiles[i].height - offsetX +50,
+ //       isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15) + (lineHeight*currentStage));
 
       } else {
         isoTiles[i].mouse = false;
@@ -633,7 +655,6 @@ if(currentStage == '0') ctx.strokeStyle = "rgba(50,50,50,.0)"
 
 
 /* dessin montée */
-
 for(var j = 0; j <= isoTiles[i].stage; j++ ) {
       ctx.drawImage(imgGround,
             canvas.width / 2 + (isoTiles[i].posX * tileSizeX / 2/zoom) - (isoTiles[i].posY * tileSizeX / 2/zoom) - offsetX/zoom,
