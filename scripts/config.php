@@ -1,8 +1,7 @@
 <?php
 try {
-//	$DB = new PDO('mysql:host=mysql51-42.perso;dbname=marcteysmysql', 'marcteysmysql', 'escadron8');
-	//$DB = new PDO('mysql:host=localhost;dbname=marcteysmysql', 'root', '');
-	$DB = new PDO('mysql:host=localhost;dbname=marcteysmysql', 'root', 'mysql');
+	$DB = new PDO('mysql:host=localhost;dbname=marcteysmysql', 'root', '');
+	//$DB = new PDO('mysql:host=localhost;dbname=marcteysmysql', 'root', 'mysql');
 	//mysql
 	$DB -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOExeption $e) {

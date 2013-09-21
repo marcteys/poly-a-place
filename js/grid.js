@@ -6,7 +6,7 @@ window.onload = function () {
   console.log(getHash());
 
 }
-var zoom = 2;
+var zoom = 5;
 
 
 var canvas = document.getElementById('canvas');
@@ -61,7 +61,7 @@ function changeStage(sens) {
   var tileSizeXimg = 100;
   var tileSizeYimg = 65;
   var gridResolutionX =
-    gridResolutionY = /*Math.floor( window.innerHeight/80)*/ 15;
+    gridResolutionY = /*Math.floor( window.innerHeight/80)*/ 5;
   var debugMode = false;
   var isClick = false;
 
@@ -422,13 +422,32 @@ ctx.closePath();
 
       ctx.beginPath();
 
-      //            canvas.width / 2 + (isoTiles[i].posX * tileSizeX / 2/zoom) - (isoTiles[i].posY * tileSizeX / 2/zoom) - offsetX/zoom,
-      //      canvas.height / 5 + (isoTiles[i].posY * tileSizeY / 2/zoom) + (isoTiles[i].posX * tileSizeY / 2/zoom) -((j-1) * 15 /zoom) - offsetY/zoom,
+      //           (isoTiles[i].posX * tileSizeX / 2 /zoom) - (isoTiles[i].posY * tileSizeX / 2/zoom) - offsetX/zoom,
+      //       (isoTiles[i].posY * tileSizeY / 2/zoom) + (isoTiles[i].posX * tileSizeY / 2/zoom) -((j-1) * 15 /zoom) - offsetY/zoom,
       //      
+      //   237 / 2
       //   
       //   
-      ctx.moveTo(isoTiles[0].x/zoom - (offsetX)/zoom  + 50/zoom, isoTiles[0].y - (offsetY)/zoom  + 50/zoom - (currentStage * 15)/zoom);
-      ctx.lineTo((isoTiles[0].x - isoTiles[0].height - offsetX +50)/zoom, (isoTiles[0].y + isoTiles[0].width - offsetY  + 50 - (currentStage * 15))/zoom );
+      //  
+          /*
+      ctx.moveTo(
+       (canvas.width / 2 + isoTiles[0].x - (offsetX)+ 50  )/zoom,
+        (canvas.height / 5  +isoTiles[0].y - (offsetY)  + 50 )/zoom
+        );
+      ctx.lineTo(
+       ( canvas.width / 2+ (isoTiles[0].x - isoTiles[0].height - offsetX +50))/zoom,
+        (canvas.height / 5  +isoTiles[0].y + isoTiles[0].width - offsetY  + 50 - (currentStage * 15))/zoom 
+        );
+*/
+
+  ctx.moveTo(
+     canvas.width / 2 +  (isoTiles[i].x -offsetX)/ zoom ,
+    canvas.width /5 + ( isoTiles[i].y -offsetY )/ zoom
+        );
+      ctx.lineTo(
+      canvas.width / 2 + (isoTiles[i].x - isoTiles[i].height - offsetX )/ zoom,
+    canvas.width /5 +(isoTiles[i].y + isoTiles[i].width -offsetY )/ zoom
+        );
 
 
 
@@ -438,11 +457,13 @@ ctx.closePath();
 
 
        /*
-      ctx.moveTo(isoTiles[i].x/zoom - (offsetX)/zoom  + 50/zoom, isoTiles[i].y - (offsetY)/zoom  + 50/zoom - (currentStage * 15)/zoom);
-      ctx.lineTo((isoTiles[i].x + isoTiles[i].height - offsetX +50)/zoom, (isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15))/zoom );
+      ctx.moveTo(isoTiles[i].x - (offsetX)  + 50,
+       isoTiles[i].y - (offsetY)  + 50 - (currentStage * 15)
+       );
+      ctx.lineTo((isoTiles[i].x + isoTiles[i].height - offsetX +50)/zoom, (isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15)) );/*
       ctx.lineTo((isoTiles[i].x - offsetX +50)/zoom, (isoTiles[i].y + isoTiles[i].width * 2 - offsetY  + 50 - (currentStage * 15))/zoom );
-      ctx.lineTo((isoTiles[i].x - isoTiles[i].height - offsetX +50)/zoom, (isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15))/zoom );
-*/
+      ctx.lineTo((isoTiles[i].x - isoTiles[i].height - offsetX +50)/zoom, (isoTiles[i].y + isoTiles[i].width - offsetY  + 50 - (currentStage * 15))/zoom );*/
+
 
       ctx.fillStyle = "rgba(255,255,255,0)";
       if (grid) ctx.strokeStyle = "rgba(50,50,50,.2)";
@@ -666,14 +687,14 @@ for(var j = 0; j <= isoTiles[i].stage; j++ ) {
 
 
 /* dessin des tuiles */
+
+
       ctx.drawImage(CreateImg(activeImage),
-        canvas.width / 2 + (isoTiles[i].posX * tileSizeX / 2/zoom)  - (isoTiles[i].posY * tileSizeX / 2 /zoom) - offsetX/zoom,
-        canvas.height / 5 + (isoTiles[i].posY * tileSizeY / 2 /zoom) + (isoTiles[i].posX * tileSizeY / 2 /zoom) - (isoTiles[i].stage * 15 /zoom)  - offsetY /zoom,
+      canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX)/zoom,
+     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY )/zoom,
         100/zoom,
         65/zoom
         );
-  
-
 
 
     } /* fin boucle lenght */
