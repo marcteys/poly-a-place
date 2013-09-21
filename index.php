@@ -59,6 +59,7 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="CSS3 checkbox Experiment - mteys | " data-hashtags="css3,mteys" data-via="marcteyssier" data-related="marcteyssier">Tweet</a>
     </div>
       <!--  <a href="http://www.chromeexperiments.com/" id="experiment" tabindex="-1" target="_blank">This is a Chrome Experiment</a> -->
+        <script data-main="js/main" src="js/require.js"></script>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/dragDrop.js"></script>
