@@ -6,7 +6,7 @@ window.onload = function () {
   console.log(getHash());
 
 }
-var zoom = 1;
+var zoom = 2;
 
 
 var canvas = document.getElementById('canvas');
@@ -520,13 +520,13 @@ if(currentStage == '0') ctx.strokeStyle = "rgba(50,50,50,.0)";
         );
       ctx.lineTo(
       canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX + tileSizeX/2 )/zoom,
-     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY + tileSizeY- (currentStage * 15) + (lineHeight*currentStage) )/zoom
+     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2)  - offsetY + tileSizeY- (currentStage * 15) + (lineHeight*currentStage) )/zoom
         );
 
 
       ctx.moveTo(
       canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX + tileSizeX/2 - tileSizeX/2)/zoom,
-     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY +tileSizeY/2 - (currentStage * 15))/zoom
+     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2)   - offsetY +tileSizeY/2 - (currentStage * 15))/zoom
         );
       ctx.lineTo(
       canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX + tileSizeX/2 - tileSizeX/2)/zoom,
@@ -726,7 +726,7 @@ if(currentStage == '0') ctx.strokeStyle = "rgba(50,50,50,.0)";
 /* dessin montée */
 for(var j = 0; j <= isoTiles[i].stage; j++ ) {
       ctx.drawImage(imgGround,
-            canvas.width / 2 + (isoTiles[i].posX * tileSizeX / 2/zoom) - (isoTiles[i].posY * tileSizeX / 2/zoom) - offsetX/zoom,
+            Math.floor(canvas.width / 2 + (isoTiles[i].posX * tileSizeX / 2/zoom) - (isoTiles[i].posY * tileSizeX / 2/zoom) - offsetX/zoom),
             canvas.height / 5 + (isoTiles[i].posY * tileSizeY / 2/zoom) + (isoTiles[i].posX * tileSizeY / 2/zoom) -((j-1) * 15 /zoom) - offsetY/zoom,
             100/zoom,
             65/zoom);
@@ -738,7 +738,7 @@ for(var j = 0; j <= isoTiles[i].stage; j++ ) {
 
 
       ctx.drawImage(CreateImg(activeImage),
-      canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX)/zoom,
+      Math.floor(canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX)/zoom),
      canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY )/zoom,
         100/zoom,
         65/zoom
