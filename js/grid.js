@@ -6,7 +6,7 @@ window.onload = function () {
   console.log(getHash());
 
 }
-var zoom = 2;
+var zoom = 1;
 
 
 var canvas = document.getElementById('canvas');
@@ -61,7 +61,7 @@ function changeStage(sens) {
   var tileSizeXimg = 100;
   var tileSizeYimg = 65;
   var gridResolutionX =
-    gridResolutionY = /*Math.floor( window.innerHeight/80)*/ 5;
+    gridResolutionY = /*Math.floor( window.innerHeight/80)*/ 2;
   var debugMode = false;
   var isClick = false;
 
@@ -431,20 +431,20 @@ ctx.closePath();
       //  
        
       ctx.moveTo(
-                  canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX)/zoom,
+                  canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX + tileSizeX/2 )/zoom,
      canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY )/zoom
         );
       ctx.lineTo(
-      canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX - tileSizeX / 2)/zoom,
-     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY -tileSizeY / 2)/zoom
+      canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX + tileSizeX/2 + tileSizeX / 2)/zoom,
+     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY +tileSizeY / 2)/zoom
         );
       ctx.lineTo(
-      canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX )/zoom,
-     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY - tileSizeY )/zoom
+      canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX + tileSizeX/2 )/zoom,
+     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY + tileSizeY )/zoom
         );
       ctx.lineTo(
-      canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX  + tileSizeX/2)/zoom,
-     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY -tileSizeY/2 )/zoom
+      canvas.width / 2 +  ( (isoTiles[i].posX * tileSizeX / 2)  - (isoTiles[i].posY * tileSizeX / 2 ) - offsetX + tileSizeX/2 - tileSizeX/2)/zoom,
+     canvas.height / 5 +   ( (isoTiles[i].posY * tileSizeY / 2) + (isoTiles[i].posX * tileSizeY / 2) - (isoTiles[i].stage * 15)  - offsetY +tileSizeY/2 )/zoom
         );
 
 
