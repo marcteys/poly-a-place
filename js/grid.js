@@ -948,23 +948,17 @@ function paintTool(paint) {
         $( ".uiwater" ).addClass("active");
 
 
-  } else if(paint == 'terrain') {
-              tool = '3';
-        $( ".uiterrain" ).addClass("active");
-
-
-
   }  else if(paint == 'grass') {
               tool = '0';
         $( ".uigrass" ).addClass("active");
 
   }  else if(paint == 'terrain') {
-              tool = '4';
-        $( ".uiterrain" ).addClass("active");
+        //      tool = '3';
+       // $( ".uiterrain" ).addClass("active");
 
   }  else if(paint == 'tree') {
-              tool = '5';
-        $( ".uitree" ).addClass("active");
+           //   tool = '4';
+     //   $( ".uitree" ).addClass("active");
 
   }
 }
@@ -972,7 +966,14 @@ function paintTool(paint) {
 
 
 
-
+function zoomFactor(data) {
+  console.log(data);
+  if (data == '+') {
+zoom += 1;
+  } else if (data == '-') {
+zoom -=1;
+  }
+}
 
 
 

@@ -35,8 +35,8 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 
 <div class="panel panel1">
   <ul>
-    <li class="uiitem uigrass active"><a  onclick="paintTool('grass')" >a</a></li>
-    <li class="uiitem uiroad"><a onclick="paintTool('road')" >a</a></li>
+    <li class="uiitem uigrass"><a  onclick="paintTool('grass')" >a</a></li>
+    <li class="uiitem uiroad active"><a onclick="paintTool('road')" >a</a></li>
     <li class="uiitem uiwater"><a  onclick="paintTool('water')" >a</a></li>
     <li class="uiitem uiterrain"><a  onclick="paintTool('terrain')" >a</a></li>
     <li class="uiitem uitree"><a  onclick="paintTool('tree')" >a</a></li>
@@ -55,8 +55,8 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 
 <div class="panel panelzoom">
   <ul>
-    <li class="zoomplus"><a  onclick="displayGrid()" ></a></li>
-    <li class="zoommoins"><a  onclick="changeStage('+')"></a></li>
+    <li class="zoomplus"><a  onclick="zoomFactor()" ></a></li>
+    <li class="zoommoins"><a  onclick="zoomFactor('-')"></a></li>
   </ul>
 </div>
 
@@ -74,8 +74,16 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
      <iframe src="http://ghbtns.com/github-btn.html?user=marcteys&repo=poly-a-place&type=watch"
   allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="Poly A Place | Create your low poly landscape " data-via="marcteyssier" data-related="marcteyssier">Tweet</a>
-</p>
+  </p>
 </div>
+
+<div class="info info2 display">
+  <p><img src="img/leftclick.png" >Add a new landscape</p>
+  <p><img src="img/middleclick.png" >Move current view</p>
+  <p><img src="img/rightclick.png" >Reset tile</p>
+</div>
+
+
 <!--
 <div id="savedZone"></div>
 <div id="panel" draggable="true">
@@ -110,7 +118,6 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
         <script data-main="js/main" src="js/require.js"></script>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/dragDrop.js"></script>
 
 <script type="text/javascript" src="js/grid.js"></script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
