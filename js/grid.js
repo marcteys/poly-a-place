@@ -6,7 +6,6 @@ window.onload = function () {
   console.log(getHash());
 
 }
-var zoom = 2;
 
 
 var canvas = document.getElementById('canvas');
@@ -42,7 +41,7 @@ function changeStage(sens) {
 
 
 
-  var mouseX = 999,
+  var mouseX = 999, 
     mouseY = 999,
 
     isoTiles = new Array;
@@ -55,13 +54,16 @@ function changeStage(sens) {
 
   var tool = '1';
 
+
+var zoom = 1;
+
   var num = 100;
   var tileSizeX = 100;
   var tileSizeY = 50;
   var tileSizeXimg = 100;
   var tileSizeYimg = 65;
   var gridResolutionX =
-    gridResolutionY = /*Math.floor( window.innerHeight/80)*/ 8;
+    gridResolutionY = /*Math.floor( window.innerHeight/80)*/ 15;
   var debugMode = false;
   var isClick = false;
 

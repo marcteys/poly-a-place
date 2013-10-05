@@ -7,28 +7,55 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 
 <meta property="og:image" content="http://marcteyssier.com/experiment/poly-a-place/icon.jpg"/>
 <link href="http://marcteyssier.com/experiment/poly-a-place/icon.jpg" rel="image_src"  />
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
 
 <style>
 
 </style>
 
     </head>
-    <body >
+    <body>
 
 
-
+<!--
 <div id="content_loader">
-   <!--       <?php if(isset($_GET['randUrl'])) echo $_GET['randUrl']; ?> -->
-
+     <?php if(isset($_GET['randUrl'])) echo $_GET['randUrl']; ?> 
       <div id="loadingProgressG">
             <div id="loadingProgressG_1" class="loadingProgressG">
             </div>
       </div> 
 </div>
-    	    	<h1 class="savedZone"><img src="icon.png" alt="Poly-A-Place" >POLY-A-PLACE<span>0.2</span></h1>
-    	    	<p><em>Left click</em> to paint the road</p>
-    	    	<p style="top:18%"><em>Right click</em> to remove it
-    	    		</p>
+-->
+
+<header>
+  <h1>Poly a place</h1>
+  
+</header>
+
+
+
+<div class="panel panel1">
+  <ul>
+    <li class="uiitem uigrass active"><a  onclick="paintTool('grass')" >a</a></li>
+    <li class="uiitem uiroad"><a onclick="paintTool('road')" >a</a></li>
+    <li class="uiitem uiwater"><a  onclick="paintTool('water')" >a</a></li>
+    <li class="uiitem uiterrain"><a  onclick="paintTool('terrain')" >a</a></li>
+    <li class="uiitem uitree"><a  onclick="paintTool('tree')" >a</a></li>
+  </ul>
+
+</div>
+
+<div class="panel panel2">
+  <ul>
+    <li class="uiitem uigrid active"><a  onclick="displayGrid()" ></a></li>
+    <li class="uiitem uilevelplus active"><a  onclick="changeStage('+')"></a></li>
+    <li class="uiitem uilevelmoins active"><a  onclick="changeStage('-')"></a></li>
+  </ul>
+
+</div>
+
+
+<!--
 <div id="savedZone"></div>
 <div id="panel" draggable="true">
 
@@ -53,12 +80,14 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 <a href="#" onclick="function f() {if(confirm('reset?')){initTiles();} } f();" class="i" >X</a>
 
 </div>
+
+-->
          <canvas id="canvas" ></canvas>
 
     <div class="share">
         <a href="https://twitter.com/share" class="twitter-share-button" data-text="CSS3 checkbox Experiment - mteys | " data-hashtags="css3,mteys" data-via="marcteyssier" data-related="marcteyssier">Tweet</a>
     </div>
-      <!--  <a href="http://www.chromeexperiments.com/" id="experiment" tabindex="-1" target="_blank">This is a Chrome Experiment</a> -->
+    <a href="http://www.chromeexperiments.com/" id="experiment" tabindex="-1" target="_blank">This is a Chrome Experiment</a>
         <script data-main="js/main" src="js/require.js"></script>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
