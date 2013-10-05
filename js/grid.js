@@ -934,7 +934,9 @@ function displayGrid() {
   grid ^= true;
   $('.uigrid').toggleClass('off');
 }
-
+function displayInfo() {
+  $('.info').toggleClass('display');
+}
 function paintTool(paint) {
  $( ".panel1" ).find( "li.uiitem.active" ).removeClass("active");
 

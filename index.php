@@ -3,7 +3,6 @@
 xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <head>
         <title>Poly a place</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 
 <meta property="og:image" content="http://marcteyssier.com/experiment/poly-a-place/icon.jpg"/>
 <link href="http://marcteyssier.com/experiment/poly-a-place/icon.jpg" rel="image_src"  />
@@ -54,7 +53,29 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 
 </div>
 
+<div class="panel panelzoom">
+  <ul>
+    <li class="zoomplus"><a  onclick="displayGrid()" ></a></li>
+    <li class="zoommoins"><a  onclick="changeStage('+')"></a></li>
+  </ul>
+</div>
 
+
+
+<div class="panel panelinfo">
+  <ul>
+    <li class="moreinfo"><a  onclick="displayInfo()" ></a></li>
+  </ul>
+</div>
+
+<div class="info display">
+  <p> <strong>Poly a place</strong> is developed by <a href="http://marcteyssier.com" > Marc Teyssier</a>. You can take view the source in <a href="https://github.com/marcteys/poly-a-place/">GitHub</a>.</P>
+    <p>
+     <iframe src="http://ghbtns.com/github-btn.html?user=marcteys&repo=poly-a-place&type=watch"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Poly A Place | Create your low poly landscape " data-via="marcteyssier" data-related="marcteyssier">Tweet</a>
+</p>
+</div>
 <!--
 <div id="savedZone"></div>
 <div id="panel" draggable="true">
@@ -84,9 +105,7 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 -->
          <canvas id="canvas" ></canvas>
 
-    <div class="share">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="CSS3 checkbox Experiment - mteys | " data-hashtags="css3,mteys" data-via="marcteyssier" data-related="marcteyssier">Tweet</a>
-    </div>
+
     <a href="http://www.chromeexperiments.com/" id="experiment" tabindex="-1" target="_blank">This is a Chrome Experiment</a>
         <script data-main="js/main" src="js/require.js"></script>
 

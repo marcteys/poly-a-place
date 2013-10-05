@@ -1,25 +1,27 @@
+::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
+::selection { background: #5af; color: #fff; text-shadow: none; }
+
 * {
 	margin:0;
 	padding:0;
-	font-family: 'Press Start 2P', cursive;
-	color: white;
+    font-family: 'Lato', sans-serif;
 }
 body {
 	background-color:#e5dfd3;
+        color:#999;
+
 }
 
 p {
-		position: absolute;
-top:15%;
-	left: 15%;
+		
 	font-size:12px;
+        color:#999;
 
-	text-shadow : rgba(0,0,0,.3) 0px 0px 5px;
-			text-shadow: 	 #b6b6b6 2px 2px 0;
 
 	/*text-shadow: 	#F2F2F2 1px 1px 0px, #ccc 3px 3px 0;*/
 
 }
+
 span {
 font-size:11px;	
 margin-left:10px;
@@ -55,28 +57,6 @@ position:absolute;
 left:-26%;
 top:-32%
 }
-.share {
-    position: absolute;
-  
-left:15%;
-top:25%;
-    width: 85px;
-    overflow: hidden;
-    opacity: .7;
-    -webkit-transition:all .4s;
-    -moz-transition:all .4;
-    -o-transition:all .4s;
-    -ms-transition:all .4s;
-    transition:all .4s;
-}
-.share:hover {
-    opacity: 1;
-}
-
-.clear {
-    clear: both;
-    height: 10px;
-}
 
 
 
@@ -91,11 +71,14 @@ header {
 z-index:100;
 }
 
+strong {
+            color:#999;
+
+}
 
 
 h1 {
     background: url(../img/logo.png) no-repeat 0 10px ;
-    font-family: 'Lato', sans-serif;
     height:100%;
     width:200px;
     margin-left:55px;
@@ -124,6 +107,7 @@ position: absolute;
 
 border-radius: 3px;
 overflow: hidden;
+z-index:20;
 }
 
 .panel1 {
@@ -141,7 +125,7 @@ top: 100px;
 
 
 .panel li {
-   border-top: 1px solid rgba(0,0,0,.2);
+   border-top: 1px solid rgba(0,0,0,.10);
    height: 70px;
  background-color: white;
      -webkit-transition: all .3s;
@@ -156,7 +140,7 @@ top: 100px;
     background: transparent url(../img/uigrass.png) no-repeat center center;
     opacity: .5;
 }
-.panel li.uiitem a{
+.panel li a{
 text-indent: -9999px;
 overflow: hidden;
 height: 100%;
@@ -169,6 +153,7 @@ cursor: pointer;
     opacity: 1;
 
 }
+
 
 .panel li.uiitem.uigrass {background-image: url(../img/uigrass.png);}
 .panel li.uiitem.uiroad {background-image: url(../img/uiroad.png);}
@@ -183,23 +168,105 @@ cursor: pointer;
 
 
 
-
-
-
-.panelzoom {
-right:35;
+.panel2 li.uiitem.active{
+    background-color: #f5f5f5;
+}
+.panel2 li.uiitem:hover{
+    background-color: white;
 }
 
 
+.panelzoom {
+right:35px;
+top:100px;
+width:50px;
+}
+.panelinfo {
+    width:50px;
+    right:35px;
+    top:220px;
+}
+.panelzoom li,.panelinfo li  {
+height: 50px;
+}
+
+li.zoomplus,li.zoommoins, li.moreinfo {
+    text-align: center;
+    color: rgba(139,181,74, .8);
+ line-height:50px;
+    font-weight: 700;
+    font-size: 32px;
+    text-shadow: 0px 1px 1px #def, 0 0 0 #000;
+    cursor: pointer;
+    opacity: .6;
+}
+li.zoomplus:hover,li.zoommoins:hover, li.moreinfo:hover {
+    opacity: 1;
+} 
+li.zoomplus:active:before,li.zoommoins:active:before, li.moreinfo:active:before {
+margin-top: 1px;
+} 
+li.zoommoins {
+ line-height:45px;
+ }
+ li.moreinfo {
+    font-size:22px;
+}
+li.zoomplus:before{
+    content: '+';
+     position: absolute;
+left: 16px;
+      }
+li.zoommoins:before{
+     content: '\2013';     position: absolute;left: 16px;
+ }
+li.moreinfo:before{ 
+    content: '?';     position: absolute;left: 21px;
+
+}
 
 
+.info {
+
+        width: 220px;
+    background: white;
+    height:110px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.15);
+position: absolute;
+right: 105px;
+top: 220px;
+border-radius: 3px;
+overflow: hidden;
+z-index:20;
+opacity: 1;
+     -webkit-transition: all .5s;
+
+}
+
+.display {
+    opacity: 0;
+    top: -80px;
+    z-index: 2;
+}
+
+.info p {
+    margin:15px;
+    padding: 0;
+    position: static;        color:#999;
+
+}
+.info p a{
+      color:#999;
+
+
+}
 #experiment {
     width: 150px; height: 79px; background-size: 150px 79px; 
     pointer-events: auto; left: 20px;
      bottom: 35px; opacity: 0.8; z-index: 100000; 
      background-image: url(../img/chrome-experimentb.png); visibility: visible;
     position: absolute;
-    z-index: 20;
+    z-index: 19;
     left: 35px;
 
     overflow: hidden;
@@ -213,15 +280,7 @@ right:35;
 
 
 
-
-
-
-
-
-
-
-
-
+ 
 
 input[type='text'] {
     width: 100%;
@@ -349,4 +408,3 @@ margin-left:256px;
 }
 
 }
-- See more at: http://cssload.net/#sthash.GS2Z8drP.dpuf
