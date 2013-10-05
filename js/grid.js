@@ -929,6 +929,26 @@ function makeid()
 
 /* UI */
 
+var total = 0;
+var newzoom;
+
+function zoomFactor(data) {
+
+  if (data == '+'  && zoom >1) {
+    zoom = zoom-0.5;
+  } else if (data == '-') {
+    zoom = zoom+0.5;
+  } else  if (data == 'ok'){
+    return false;
+  }
+
+
+
+}
+
+
+
+
 
 function displayGrid() {
   grid ^= true;
@@ -952,11 +972,13 @@ function paintTool(paint) {
               tool = '0';
         $( ".uigrass" ).addClass("active");
 
-  }  else if(paint == 'terrain') {
+  }  else if(paint == 'terrain') {              tool = '0';
+
         //      tool = '3';
        // $( ".uiterrain" ).addClass("active");
 
-  }  else if(paint == 'tree') {
+  }  else if(paint == 'tree') {              tool = '0';
+
            //   tool = '4';
      //   $( ".uitree" ).addClass("active");
 
@@ -965,15 +987,6 @@ function paintTool(paint) {
 
 
 
-
-function zoomFactor(data) {
-  console.log(data);
-  if (data == '+') {
-zoom += 1;
-  } else if (data == '-') {
-zoom -=1;
-  }
-}
 
 
 

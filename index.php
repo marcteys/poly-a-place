@@ -16,7 +16,7 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
     <body>
 
 
-<!--
+
 <div id="content_loader">
      <?php if(isset($_GET['randUrl'])) echo $_GET['randUrl']; ?> 
       <div id="loadingProgressG">
@@ -24,7 +24,6 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
             </div>
       </div> 
 </div>
--->
 
 <header>
   <h1>Poly a place</h1>
@@ -55,8 +54,8 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 
 <div class="panel panelzoom">
   <ul>
-    <li class="zoomplus"><a  onclick="zoomFactor()" ></a></li>
-    <li class="zoommoins"><a  onclick="zoomFactor('-')"></a></li>
+    <li class="zoomplus"><a  onclick="zoomFactor('+')" >+</a></li>
+    <li class="zoommoins"><a  onclick="zoomFactor('-')">&#8211;</a></li>
   </ul>
 </div>
 
@@ -64,7 +63,7 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 
 <div class="panel panelinfo">
   <ul>
-    <li class="moreinfo"><a  onclick="displayInfo()" ></a></li>
+    <li class="moreinfo"><a  onclick="displayInfo()" >?</a></li>
   </ul>
 </div>
 
@@ -84,33 +83,6 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 </div>
 
 
-<!--
-<div id="savedZone"></div>
-<div id="panel" draggable="true">
-
-<a  onclick="paintTool('road')" class=" r" ></a>
-<a  onclick="paintTool('water')" class="w opacityhalf" ></a>
-  <a  onclick="paintTool('grass')" class="gr  opacityhalf" >G</a>
-
-<a  onclick="paintTool('terrain')" class="t opacityhalf" ></a>
-<div class="sep"></div>
-<a  onclick="changeStage('+')" class="a" >+</a>
-<a  onclick="changeStage('-')" class="a" >-</a>
-
-<a  onclick="displayGrid()" class="g" ></a>
-
-<input type="text" placeholder="Nom Terrain" value="" id="terrainName"/>
-<input type="text" placeholder="Pseudo"  value="" id="user"/>
-
-<a  onclick="save();" class="i" >S</a>
-
-<a  onclick="exportCanvas();" class="i" >E</a>
-
-<a href="#" onclick="function f() {if(confirm('reset?')){initTiles();} } f();" class="i" >X</a>
-
-</div>
-
--->
          <canvas id="canvas" ></canvas>
 
 
@@ -121,7 +93,7 @@ xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">    <h
 
 <script type="text/javascript" src="js/grid.js"></script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<p style="display:none">
+<script>
 
 var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-26921492-1']);
@@ -135,7 +107,7 @@ var _gaq = _gaq || [];
 
  $(document).ready(function() {
 
- });</p>
+ });</script>
 
 
 

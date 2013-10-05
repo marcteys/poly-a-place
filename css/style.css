@@ -189,7 +189,15 @@ width:50px;
 .panelzoom li,.panelinfo li  {
 height: 50px;
 }
+.panelzoom li a, .panelinfo li a {
+    text-indent: 0;
 
+}
+.panelzoom li a:active {
+    
+/** faire quelque chose */
+
+}
 li.zoomplus,li.zoommoins, li.moreinfo {
     text-align: center;
     color: rgba(139,181,74, .8);
@@ -203,27 +211,14 @@ li.zoomplus,li.zoommoins, li.moreinfo {
 li.zoomplus:hover,li.zoommoins:hover, li.moreinfo:hover {
     opacity: 1;
 } 
-li.zoomplus:active:before,li.zoommoins:active:before, li.moreinfo:active:before {
-margin-top: 1px;
-} 
+
 li.zoommoins {
  line-height:45px;
  }
  li.moreinfo {
     font-size:22px;
 }
-li.zoomplus:before{
-    content: '+';
-     position: absolute;
-left: 16px;
-      }
-li.zoommoins:before{
-     content: '\2013';     position: absolute;left: 16px;
- }
-li.moreinfo:before{ 
-    content: '?';     position: absolute;left: 21px;
 
-}
 
 
 .info {
