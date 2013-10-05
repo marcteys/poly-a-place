@@ -932,40 +932,37 @@ function makeid()
 
 function displayGrid() {
   grid ^= true;
-  $('.g').toggleClass('opacityhalf');
+  $('.uigrid').toggleClass('off');
 }
 
 function paintTool(paint) {
-  if(paint == 'road') {
-       $('.r').removeClass('opacityhalf');
-      $('.w').addClass('opacityhalf');
-      $('.t').addClass('opacityhalf');
-      $('.gr').addClass('opacityhalf');
+ $( ".panel1" ).find( "li.uiitem.active" ).removeClass("active");
 
+  if(paint == 'road') {
       tool = '1';
+        $( ".uiroad" ).addClass("active");
   } else if(paint == 'water') {
-              tool = '2';
-      $('.r').addClass('opacityhalf');
-      $('.w').removeClass('opacityhalf');
-      $('.t').addClass('opacityhalf');
-      $('.gr').addClass('opacityhalf');
+       tool = '2';
+        $( ".uiwater" ).addClass("active");
 
 
   } else if(paint == 'terrain') {
               tool = '3';
-      $('.r').addClass('opacityhalf');
-      $('.w').addClass('opacityhalf');
-      $('.t').removeClass('opacityhalf');
-      $('.gr').addClass('opacityhalf');
+        $( ".uiterrain" ).addClass("active");
 
 
-  }
-  else if(paint == 'grass') {
+
+  }  else if(paint == 'grass') {
               tool = '0';
-       $('.r').addClass('opacityhalf');
-      $('.w').addClass('opacityhalf');
-      $('.gr').removeClass('opacityhalf');
-      $('.t').addClass('opacityhalf');
+        $( ".uigrass" ).addClass("active");
+
+  }  else if(paint == 'terrain') {
+              tool = '4';
+        $( ".uiterrain" ).addClass("active");
+
+  }  else if(paint == 'tree') {
+              tool = '5';
+        $( ".uitree" ).addClass("active");
 
   }
 }
