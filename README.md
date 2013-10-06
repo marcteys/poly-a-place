@@ -27,17 +27,17 @@ TODO
 
 
 __Optimisation__
-* Code with classes... (new tile, update,...) - [Design pattern](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+* Code with classes... (new tile, update,...) - [Design patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 __Visual__
 * Resizing viewports
 * Remove the loader only when everything is loaded
-* Build a new interface
+* DONE - Build a new interface
 * Improve drag and Drop
 * New sprites to correct the 'white line'
 * Trees (how to plant ? random ?)
 * Add rows ? (.push)
-* Zoom level (default /2 )
+* DONE - Zoom level (default /2 )
 
 __Saving__
 * Take a screenshot, Resize, Rename and Save
